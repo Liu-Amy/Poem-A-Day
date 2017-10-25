@@ -1,14 +1,25 @@
 {
   "manifest_version": 2,
   "name": "Poem A Day",
+  "description" : "This extension will provide a poem a day",
   "version": "0.1",
 
-  "content_scripts": [
-  {
-    "matches": [
-      "<all_urls>"
-    ],
-    "js": ["content.js"]
-  }
+  // "browser_action": {
+  //   "default_popup": "home.html"
+  // },
+  "chrome_url_overrides": {
+    "newtab": "home.html"
+  },
+  "permissions": [
+    "activeTab"
   ]
+  // "content_scripts": [
+  // {
+  //   "matches": [
+  //     "<all_urls>"
+  //   ],
+  //   "js": ["content.js"]
+  // }
+  // ]
+
 }
