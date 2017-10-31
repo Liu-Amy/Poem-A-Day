@@ -1,3 +1,4 @@
+//Randomly selects an author and then calls getPoetry() to get a poem.
 function getAuthorList() {
     var xhr = new XMLHttpRequest();
     authors = null;
@@ -16,7 +17,7 @@ function getAuthorList() {
     return getPoetry(author)
 }
 
-
+//Given an author, randomly select a poem and returns formatted text
 function getPoetry(author) {
     var xhr = new XMLHttpRequest();
     titles = null;
@@ -33,7 +34,7 @@ function getPoetry(author) {
 
     lines = title.indexof('lines');
 
-    final_string = ""
+    final_string = "";
     for (i = 0; i < title.indexof('linecount'); i++) {
         final_string += lines[i] + '\n';
     }
