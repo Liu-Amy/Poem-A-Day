@@ -3,15 +3,19 @@
   <head>
     <title>Poem A Day</title>
     <script src="script.js">getPoetry()</script>
+
+    <body>
+      <h1 id = "title"></h1>
+      <pre id="poetry"></pre>
+    </body>
+
     <style>
       body {
-        background-image: url("img/flower_field.jpg");
-          /* Full height */
-        height: 100%;
-
-         /*Center and scale the image nicely */
-
-        background-size: 100%;
+        background-image: url("img/night.jpg");
+        height: 100%; /* Full height */
+        background-size: 100%; /*Center and scale the image nicely */
+        text-align: center;
+        vertical-align: middle;
       }
       center{
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -21,32 +25,18 @@
         letter-spacing: 0;
         white-space: nowrap;
         margin-top: 5%;
-        /*margin-left: 30%;*/
       }
       h1 {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 250%;
-        margin-left: 33%;
         font-weight: 500;
+        color: white;
       }
       pre {
-        /*color: white;*/
-        margin-left: 33%;
-        font-size: 200%;
+        color: white;
+        font-size: 150%;
         font-weight: 800;
-        color: rgba(255,255,255,.9);
-        background: rgb(0, 0, 0); /* fallback color */
-        background: rgba(0, 0, 0, 0.7);
-        padding:0 5px;
-        margin-right:31%
       }
     </style>
   </head>
-  <body>
-    <center>TODAY'S POEM</center>
-    <br>
-    <br>
-    <h1 id = "title"></h1>
-    <pre id="poetry"></pre>
-  </body>
 </html>

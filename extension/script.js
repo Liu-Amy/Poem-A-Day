@@ -19,12 +19,11 @@ function getPoetry() {
                 final_string += lines[i] + '\n';
             }
 
-            final_string += '\n\t' + entry.author;
-            console.log("final_string: " + final_string);
+            final_string += '\n' + entry.author;
             document.getElementById("title").innerHTML = title;
             document.getElementById("poetry").innerHTML = final_string;
         }
     };
-    xhr.open('GET', url);
+    xhr.open('GET', url, true);
     xhr.send();
 }
