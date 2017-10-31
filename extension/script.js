@@ -20,8 +20,9 @@ function getPoetry() {
             }
 
             final_string += '\n\t' + entry.author;
-            document.getElementById("title").textcontent = title;
-            document.getElementById("poetry").textcontent = final_string;
+            console.log("final_string: " + final_string);
+            document.getElementById("title").innerHTML = title;
+            document.getElementById("poetry").innerHTML = final_string;
         }
     };
     xhr.open('GET', url);
