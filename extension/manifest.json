@@ -9,6 +9,7 @@
   },
   "permissions": [
     "activeTab",
-    "http://poetrydb.org/*"
+    "http://poetrydb.org/*",
+    "storage"
   ]
 }
