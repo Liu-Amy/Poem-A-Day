@@ -26,6 +26,6 @@ function getPoetry() {
             document.getElementById("poetry").textcontent = final_string;
         }
     };
-    xhr.open('GET', url, true);
+    xhr.open('GET', url);
     xhr.send();
 }
