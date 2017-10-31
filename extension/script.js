@@ -11,17 +11,15 @@ function getPoetry() {
             entries = JSON.parse(this.responseText);
             entry = entries[Math.floor(Math.random()*entries.length)];
 
-            title = entry.indexof('title');
-
-            lines = entry.indexof('lines');
+            title = entry.title;
+            lines = entry.lines;
 
             final_string = "";
-            for (i = 0; i < title.indexof('linecount'); i++) {
+            for (i = 0; i < entry.linecount; i++) {
                 final_string += lines[i] + '\n';
             }
 
-            final_string += '\n\t' + author;
-
+            final_string += '\n\t' + entry.author;
             document.getElementById("title").textcontent = title;
             document.getElementById("poetry").textcontent = final_string;
         }
