@@ -2,15 +2,15 @@
 <html>
   <head>
     <title>Poem A Day</title>
-    <script src="script.js"></script>
+    <script src="script.js">getPoetry()</script>
     <style>
       body {
         background-image: url("img/flower_field.jpg");
           /* Full height */
-        height: 100%; 
+        height: 100%;
 
          /*Center and scale the image nicely */
-        
+
         background-size: 100%;
       }
       center{
@@ -43,11 +43,11 @@
     </style>
   </head>
   <body>
-    <center>TODAY'S POEM</center>
+    <center id = "title">TODAY'S POEM</center>
     <br>
     <br>
     <h1> The Road Not Taken: </h1>
-    <pre>
+    <pre id="poetry">
       "Two roads diverged in a yellow wood,
       And sorry I could not travel both
       And be one traveler, long I stood
@@ -71,6 +71,6 @@
 
                               - Robert Frost
     </pre>
-   
+
   </body>
 </html>

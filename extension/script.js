@@ -1,44 +1,31 @@
-//Randomly selects an author and then calls getPoetry() to get a poem.
-function getAuthorList() {
+document.addEventListener("DOMContentLoaded", function() {
+  getPoetry();
+});
+//Randomly selects a poem. Yeah. This simple.
+function getPoetry() {
     var xhr = new XMLHttpRequest();
-    authors = null;
-    url = '//poetrydb.org/author';
-    xhr.onreadystatechange() = function() {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-            authors = JSON.parse(this.responseText);
-            authors = authors.indexof('authors');
+    entries = null;
+    url = 'http://poetrydb.org/author/*';
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            entries = JSON.parse(this.responseText);
+            entry = entries[Math.floor(Math.random()*entries.length)];
+
+            title = entry.indexof('title');
+
+            lines = entry.indexof('lines');
+
+            final_string = "";
+            for (i = 0; i < title.indexof('linecount'); i++) {
+                final_string += lines[i] + '\n';
+            }
+
+            final_string += '\n\t' + author;
+
+            document.getElementById("title").textcontent = title;
+            document.getElementById("poetry").textcontent = final_string;
         }
     };
-    xhr.open('GET', url, false)
+    xhr.open('GET', url, true);
     xhr.send();
-
-    author = authors[Math.floor(Math.random()*authors.length)];
-
-    return getPoetry(author)
-}
-
-//Given an author, randomly select a poem and returns formatted text
-function getPoetry(author) {
-    var xhr = new XMLHttpRequest();
-    titles = null;
-    url = '//poetrydb.org/author' + author;
-    xhr.onreadystatechange() = function() {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-            titles = JSON.parse(this.responseText);
-        }
-    };
-    xhr.open('GET', url, false)
-    xhr.send();
-
-    title = titles[Math.floor(Math.random()*titles.length)];
-
-    lines = title.indexof('lines');
-
-    final_string = "";
-    for (i = 0; i < title.indexof('linecount'); i++) {
-        final_string += lines[i] + '\n';
-    }
-
-    final_string += '\n\t' + author;
-    return final_string;
 }
