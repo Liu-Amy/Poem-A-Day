@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 final_string += lines[i] + '\n';
             }
 
-            final_string += '\n-' + entry.author;
+            final_string += '\n- ' + entry.author;
             document.getElementById("title").innerHTML = title;
             document.getElementById("poetry").innerHTML = final_string;
             getPoetry(false);
