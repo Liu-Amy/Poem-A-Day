@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-
     chrome.storage.local.get("poems", function(poemsObj) {
 
         var poems = poemsObj.poems;
@@ -37,7 +36,7 @@ function getPoetry(initialload) {
             entries = JSON.parse(this.responseText);
             short_poems = []
             for (i = 0 ; i < entries.length; i++) {
-                if (entries[i].linecount <= 30) {
+                if (entries[i].linecount <= 40) {
                     short_poems.push(entries[i]);
                 }
             }
